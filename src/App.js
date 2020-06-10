@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Statuses from './components/statuses';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
     render() {
         return (
@@ -17,7 +17,6 @@ class App extends Component {
             .then(res => res.json())
             .then((data) => {
                 this.setState({ statuses: data })
-                console.log(data)
             })
             .catch(console.log)
     }
