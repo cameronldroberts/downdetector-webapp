@@ -34,17 +34,19 @@ const statuses = async () => {
     return statusesarray;
 }
 
-module.exports = async function (context) {
-    try {
-        const data = await statuses();
+module.exports = async function (context, req) {
+    context.log('JavaScript HTTP trigger function processed a request.');
+
+    if (req.query.name || (req.body && req.body.name)) {
         context.res = {
-            body: data,
+            // status: 200, /* Defaults to 200 */
+            body: "Hello " + (req.query.name || req.body.name)
         };
-    } catch (error) {
+    }
+    else {
         context.res = {
-            body: {
-                message: 'Error has occured'
-            },
+            status: 400,
+            body: "Please pass a name on the query string or in the request body"
         };
     }
 };
