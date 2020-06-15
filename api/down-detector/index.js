@@ -9,25 +9,30 @@ const statuses = async () => {
         "https://frsctv3lx5sn.statuspage.io/api/v2/status.json", 
         "https://gpkpyklzq55q.statuspage.io/api/v2/status.json",
         "https://kctbh9vrtdwd.statuspage.io/api/v2/status.json",
-        "https://mxfydrt8b8xw.statuspage.io/api/v2/status.json"
+        "https://mxfydrt8b8xw.statuspage.io/api/v2/status.json",
+        "https://www.facebook.com/platform/api-status/"
     ];
 
     const responses = await Promise.all(URLs.map(url => axios.get(url)));
 
     responses.forEach((response) => {
         if(response.status == 200 && response.data != null){
-        const obj = {
-            name: response.data.page.name, 
-            status: response.data.status,
-        }
-        statusesarray.push(obj);
-        }
-        // }else {
-        //     const obj ={
-        //         name: response.URLs,
-        //         status: "Error getting status for this service"
-        //     }
-        // } 
+            // console.log(response)
+            if(response.config.url.includes("statuspage.io")){
+                const obj = {
+                    name: response.data.page.name, 
+                    status: response.data.status,
+                }
+                statusesarray.push(obj); 
+            }else {
+                console.log(response)
+                const obj = {
+                    name: "Facebook",
+                    status: response.data.current.subject
+                }
+                statusesarray.push(obj); 
+                }   
+            }
     });
 
 
