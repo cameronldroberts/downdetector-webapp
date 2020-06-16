@@ -13,7 +13,7 @@ class App extends Component {
     };
 
     componentDidMount() {
-        fetch('https://down-detector.azurewebsites.net/api/down-detector')
+        fetch('https://downdetector.azurewebsites.net/api/downdetector')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ statuses: data })
