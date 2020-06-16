@@ -1,0 +1,7 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "AzureWebJobs.down-detector.Disabled": "true"
+  }
+}
