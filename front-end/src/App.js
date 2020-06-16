@@ -13,7 +13,7 @@ class App extends Component {
     };
 
     componentDidMount() {
-        fetch('http://localhost:7071/api/down-detector',{
+        fetch('https://downdetector.azurewebsites.net/api/downdetector',{
             headers: {
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin":"*"
