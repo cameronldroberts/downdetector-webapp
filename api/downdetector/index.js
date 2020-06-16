@@ -22,12 +22,6 @@ const statuses = async () => {
         }
         statusesarray.push(obj);
         }
-        // }else {
-        //     const obj ={
-        //         name: response.URLs,
-        //         status: "Error getting status for this service"
-        //     }
-        // } 
     });
 
 
