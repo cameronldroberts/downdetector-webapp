@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "CfDJ8FZpEvdmBD9Po2EdluYGgMqt64RB7Tb3Mn9WF9ytpnxhcSZ5gstNZIKdrQ02oFMXTxvsyg1UMNisTg8JUeNs+Azp3niF+N9NPNFHXCwrNagB1gCtxMO4YIrAsleXzR1Opw=="
+  },
+  "ConnectionStrings": {},
+  "Host": {
+    "CORS": "*"
+  }
+}
