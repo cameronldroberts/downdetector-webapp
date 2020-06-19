@@ -5,9 +5,10 @@
 /.pnp
 .pnp.js
 front-end/node_modules
+api/node_modules
 # testing
 /coverage
-
+local.settings.json
 # production
 /build
 
