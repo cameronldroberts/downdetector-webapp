@@ -10,4 +10,5 @@ Run services: ``func start``
 
 This will bring up your api layer locally
 
+Current URL - https://purple-glacier-068280b03.azurestaticapps.net/
 
